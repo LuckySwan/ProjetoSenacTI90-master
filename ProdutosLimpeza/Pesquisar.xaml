@@ -6,13 +6,17 @@
         xmlns:local="clr-namespace:ProdutosLimpeza"
         xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Pesquisar" Height="450" Width="800">
+        Title="Pesquisar" Height="575" Width="914" Background="#FFEEEEF2">
     <Grid Background="#FF9D9C9C">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label Content="Pesquisa por Itens em Estoque" HorizontalAlignment="Center" Height="65" Margin="0,23,0,346" Width="372" FontSize="20" FontWeight="Normal" FontStyle="Normal" HorizontalContentAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="40" Margin="0,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
+        <Rectangle Fill="DarkBlue" Height="15" Stroke="Black" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Center" Height="44" Margin="394,126,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
+        <Label Content="Codigo do Produto" HorizontalAlignment="Left" Height="44" Margin="146,126,0,0" VerticalAlignment="Top" Width="208" FontSize="20" FontWeight="Black" />
+        <Label Content="Pesquisa por Itens em Estoque" HorizontalAlignment="Center" Margin="226,34,308,440" Width="372" FontSize="25" FontWeight="Medium" FontStyle="Normal"  HorizontalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Center" Height="44" Margin="527,262,104,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+        <Label Content="Preço por Uni ou Lt" HorizontalAlignment="Left" Height="44" Margin="325,262,0,0" VerticalAlignment="Top" Width="197" FontSize="20" />
+        <TextBox HorizontalAlignment="Center" Height="44" Margin="394,204,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
+        <Label Content="Nome do Produto" HorizontalAlignment="Left" Height="44" Margin="146,204,0,0" VerticalAlignment="Top" Width="182" FontSize="20" />
 
     </Grid>
 </Window>
