@@ -40,7 +40,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image Source="C:\Users\lucas.oliveira\Source\Repos\ProjetoSenacTI90-master\ProdutosLimpeza\Imagem\produtos.jpg" Margin="198,98,-744,25"/>
+        <Image Source="C:\Users\lucas.osantos42\Source\Repos\ProjetoSenacTI90-master\ProdutosLimpeza\Imagem\produtos.jpg" Margin="198,98,-744,25"/>
         <Label Content="Produtos de Limpeza" HorizontalAlignment="Left" Height="74" Margin="184,19,-744,0"  FontSize="45" VerticalAlignment="Top" Width="702"/>
     </Grid>
 
