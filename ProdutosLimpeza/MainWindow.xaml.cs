@@ -30,8 +30,14 @@ namespace ProdutosLimpeza
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var pesquisar = new Pesquisar();
-            pesquisar.ShowDialog();
+            var cadastro = new addCustumerWindow();
+            cadastro.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var pedido = new Pedidos();
+            pedido.ShowDialog();
         }
     }
 }

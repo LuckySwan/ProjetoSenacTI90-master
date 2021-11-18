@@ -30,7 +30,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Pedidos" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,422,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Pedidos" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,422,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

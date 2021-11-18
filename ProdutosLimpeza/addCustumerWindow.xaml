@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProdutosLimpeza"
         mc:Ignorable="d"
-        Title="addCustumerWindow" Height="575" Width="914">
-    <Grid Margin="80">
+        Title="addCustumerWindow" Height="575" Width="914" Background="#FF9D9C9C">
+    <Grid Margin="80" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="216*"/>
+            <ColumnDefinition Width="377*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -21,23 +22,33 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Label Height="30" Content="Nome Completo" HorizontalAlignment="Right" Margin="50 0 0 10"/>
-        <Label Height="30" Content="Telefone" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="1"/>
-        <Label Height="30" Content="Cidade" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="2"/>
-        <Label Height="30" Content="Bairro" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="3"/>
-        <Label Height="30" Content="Rua" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="4"/>
-        <Label Height="30" Content="Número" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="5"/>
-        <Label Height="30" Content="Complemento" HorizontalAlignment="Right" Margin="50 0 0 10" Grid.Row="6"/>
+        <Label Content="Nome Completo" HorizontalAlignment="Left" Margin="50,0,0,0" Width="101"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="1" Width="54"/>
+        <Label Content="Cidade" HorizontalAlignment="Left" Margin="82,0,0,0" Grid.Row="2" Width="47"/>
+        <Label Content="Bairro" HorizontalAlignment="Left" Margin="88,0,0,0" Grid.Row="3" Width="41"/>
+        <Label Content="Rua" HorizontalAlignment="Left" Margin="99,0,0,0" Grid.Row="4" Width="30"/>
+        <Label Content="Número" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" Grid.Column="2" Width="54"/>
+        <Label Content="Complemento" HorizontalAlignment="Left" Margin="50,0,0,0" Grid.Row="6" Width="92"/>
 
-        <TextBox x:Name="customerNameTextBox" Grid.Column="1"/>
+        <TextBox x:Name="customerNameTextBox" Grid.Column="1" Grid.ColumnSpan="2"/>
         <TextBox x:Name="customerTelefoneTextBox" Grid.Column="1" Grid.Row="1"/>
         <TextBox x:Name="customerCidadeTextBox" Grid.Column="1" Grid.Row="2"/>
-        <TextBox x:Name="customerBairroTextBox" Grid.Column="1" Grid.Row="3"/>
-        <TextBox x:Name="customerRuaTextBox" Grid.Column="1" Grid.Row="4"/>
-        <TextBox x:Name="customerNumeroTextBox" Grid.Column="1" Grid.Row="5"/>
+        <TextBox x:Name="customerBairroTextBox" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Width="216"/>
+        <TextBox x:Name="customerRuaTextBox" Grid.Column="1" Grid.Row="4" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="250" Height="30" VerticalAlignment="Center">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.053"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="customerNumeroTextBox" Grid.Column="2" Grid.Row="4" Margin="85,0,205,0"/>
         <TextBox x:Name="customerComplementoTextBox" Grid.Column="1" Grid.Row="6"/>
-        <Label Content="CADASTRO&#x9;" Grid.Column="1" HorizontalAlignment="Left" Margin="138,-55,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.755,0.657" FontSize="22" FontWeight="Bold" Width="146"/>
-        <Button Content="Criar cliente" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="138,56,0,-62" Grid.Row="7" VerticalAlignment="Top" Width="146" FontSize="16" Background="#FF5D88FB" BorderBrush="Black"/>
+        <Label Content="CADASTRO&#x9;" Grid.Column="1" HorizontalAlignment="Left" Margin="138,-55,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.755,0.657" FontSize="22" FontWeight="Bold" Width="146" Grid.ColumnSpan="2" Height="39"/>
+        <Button Content="Confirmar" Grid.Column="1" HorizontalAlignment="Left" Margin="143,82,0,-89" Grid.Row="7" Width="146" FontSize="16" Background="#FF5D88FB" BorderBrush="Black" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="DarkBlue" Height="15" Stroke="Black" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="-80,-80,-80,0"/>
 
 
     </Grid>
