@@ -20,9 +20,12 @@ namespace ProdutosLimpeza
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            var pesquisar = new Pesquisar();
+            pesquisar.ShowDialog();
         }
     }
 }
