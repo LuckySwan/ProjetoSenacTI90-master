@@ -10,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProdutosLimpeza
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para Pedidos.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Pedidos : Window
     {
-        
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public Pedidos()
         {
-            var pesquisar = new Pesquisar();
-            pesquisar.ShowDialog();
+            InitializeComponent();
         }
     }
 }

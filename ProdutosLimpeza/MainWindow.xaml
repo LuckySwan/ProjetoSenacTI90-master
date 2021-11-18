@@ -8,8 +8,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="575" Width="914" Background="#FFEEEEF2">
     <Grid Margin="0,0,764,0" Background="DimGray">
+        
         <Rectangle Fill="DarkBlue" Height="14" Stroke="Black" VerticalAlignment="Top" Margin="0,0,-764,0"/>
-        <Button Content="Pesquizar" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Pesquizar" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,7 +41,7 @@
             </Button.RenderTransform>
         </Button>
       <Image Source="C:\Users\lucas.osantos42\Desktop\Limpeza.jpg" Margin="198,98,-744,25"/>
-        <Label Content="Produtos de Limpeza" HorizontalAlignment="Left" Height="74" Margin="184,19,-744,0" VerticalAlignment="Top" Width="702"/>
+        <Label Content="Produtos de Limpeza" HorizontalAlignment="Left" Height="74" Margin="184,19,-744,0"  FontSize="45" VerticalAlignment="Top" Width="702"/>
     </Grid>
 
 
