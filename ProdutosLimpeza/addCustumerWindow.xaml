@@ -9,7 +9,7 @@
     <Grid Margin="80">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/> 
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -36,7 +36,8 @@
         <TextBox x:Name="customerRuaTextBox" Grid.Column="1" Grid.Row="4"/>
         <TextBox x:Name="customerNumeroTextBox" Grid.Column="1" Grid.Row="5"/>
         <TextBox x:Name="customerComplementoTextBox" Grid.Column="1" Grid.Row="6"/>
-        <Label Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="133,-54,0,0" VerticalAlignment="Top"/>
+        <Label Content="CADASTRO&#x9;" Grid.Column="1" HorizontalAlignment="Left" Margin="138,-55,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.755,0.657" FontSize="22" FontWeight="Bold" Width="146"/>
+        <Button Content="Criar cliente" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="138,56,0,-62" Grid.Row="7" VerticalAlignment="Top" Width="146" FontSize="16" Background="#FF5D88FB" BorderBrush="Black"/>
 
 
     </Grid>
