@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="575" Width="914" Background="#FFEEEEF2">
     <Grid Margin="0,0,764,0" Background="DimGray">
-        
+
         <Rectangle Fill="DarkBlue" Height="14" Stroke="Black" VerticalAlignment="Top" Margin="0,0,-764,0"/>
-        <Button Content="Pesquizar" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+        <Button Content="Pesquizar" Height="64" Margin="28,70,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+        <Button Content="Cadastrar" Height="64" Margin="28,271,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,7 +30,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Pedidos" HorizontalAlignment="Left" Height="64" Width="94" Margin="30,422,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_2">
+        <Button Content="Pedidos" Height="64" Margin="28,422,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
