@@ -6,9 +6,10 @@
         xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ProdutosLimpeza"
         mc:Ignorable="d"
-        Title="confirmacao" Height="450" Width="800" Background="#FF9D9C9C">
+        Title="confirmacao" Height="400" Width="750" Background="#FF9D9C9C">
     <Grid>
         <Rectangle Fill="DarkBlue" Height="15" Stroke="Black" VerticalAlignment="Top"/>
-        
+        <Label Content="Cadastro Realizado com Sucesso ! ! ! " HorizontalAlignment="Left" FontSize="40" FontWeight="Bold" Height="122" Margin="60,138,0,0" VerticalAlignment="Top" Width="632"/>
+
     </Grid>
 </Window>

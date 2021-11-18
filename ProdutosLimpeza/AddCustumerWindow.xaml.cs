@@ -26,7 +26,8 @@ namespace ProdutosLimpeza
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var Confirmacao = new confirmacao();
+            Confirmacao.ShowDialog();
         }
     }
 }
