@@ -27,5 +27,11 @@ namespace ProdutosLimpeza
             var pesquisar = new Pesquisar();
             pesquisar.ShowDialog();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var pesquisar = new Pesquisar();
+            pesquisar.ShowDialog();
+        }
     }
 }
