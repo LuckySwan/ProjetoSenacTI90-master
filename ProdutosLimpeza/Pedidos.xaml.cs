@@ -23,5 +23,10 @@ namespace ProdutosLimpeza
         {
             InitializeComponent();
         }
+
+        private void CodigoItem1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
