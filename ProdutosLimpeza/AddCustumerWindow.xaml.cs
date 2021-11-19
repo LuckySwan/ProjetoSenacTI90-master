@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 namespace ProdutosLimpeza
 {
     
-    /// <summary>
-    /// Lógica interna para addCustumerWindow.xaml
-    /// </summary>
     public partial class addCustumerWindow : Window
     {
         string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -47,10 +44,12 @@ namespace ProdutosLimpeza
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Dados Inseridos com Sucesso");//h
+                    MessageBox.Show("Dados Inseridos com Sucesso");
                 }
             }
 
         }
+
+     
     }
 }
