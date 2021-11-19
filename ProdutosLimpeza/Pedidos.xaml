@@ -27,19 +27,23 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="Codigo do item" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="1" Grid.Column="0" Margin="0,0,64,0"></Label>
-            <Label Content="R$" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Grid.Row="1" Grid.Column="1" Margin="315,5,184,45" Grid.RowSpan="2"></Label>
+            <Label Content="R$" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Grid.Row="1" Grid.Column="1" Margin="289,2,0,48" Grid.RowSpan="2"></Label>
             <Label Content="Codigo do item" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="3" Grid.Column="0" Margin="0,0,64,0"></Label>
-            <Label Content="R$" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Grid.Row="3" Grid.Column="1" Margin="366,9,235,40" RenderTransformOrigin="0.679,-0.436" Grid.RowSpan="2"></Label>
+            <Label Content="R$" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="289,51,0,49" RenderTransformOrigin="0.679,-0.436" Grid.RowSpan="3"></Label>
             <Label Content="Codigo do item" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="4" Grid.Column="0" Margin="0,46,64,4" Grid.RowSpan="2"></Label>
-            <Label Content="R$" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Grid.Row="5" Grid.Column="1" RenderTransformOrigin="2.288,0.586" Margin="366,0,235,0"/>
+            <Label Content="R$" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Grid.Row="4" Grid.Column="1" RenderTransformOrigin="2.288,0.586" Margin="289,51,0,0" Grid.RowSpan="2"/>
             <Label Content="Valor Total" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="7" Grid.Column="1" Margin="0,0,401,0"></Label>
-            <TextBox HorizontalAlignment="Left" Height="30" Margin="191,10,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
-            <TextBox HorizontalAlignment="Left" Height="30" Margin="191,9,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
-            <TextBox HorizontalAlignment="Left" Height="30" Margin="191,9,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="417,13,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="417,9,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="417,10,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="267,10,0,0" Grid.Row="7" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346"/>
+            <TextBox x:Name="CodigoItem1" HorizontalAlignment="Left" Height="30" Margin="191,10,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2" TextChanged="CodigoItem1_TextChanged"/>
+            <TextBox x:Name="CodigoItem2" HorizontalAlignment="Left" Height="30" Margin="191,9,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="CodigoItem3" HorizontalAlignment="Left" Height="30" Margin="191,9,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="preco1" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="323,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="170"/>
+            <TextBox x:Name="preco2" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="323,9,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170"/>
+            <TextBox x:Name="preco3" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="323,6,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170"/>
+            <TextBox x:Name="precoTotal" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="267,10,0,0" Grid.Row="7" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346"/>
+            <Button Grid.Column="1" Content="OK" HorizontalAlignment="Left" Height="36" Margin="525,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="76" Click="Button_Click_1"/>
+            <Button Grid.Column="1" Content="OK" HorizontalAlignment="Left" Height="36" Margin="525,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
+            <Button Content="Faturar" HorizontalAlignment="Left" Height="36" Margin="209,2,0,0" Grid.Row="7" VerticalAlignment="Top" Width="76" Grid.ColumnSpan="2" Click="Button_Click_3"/>
+            <Button Grid.Column="1" Content="OK" HorizontalAlignment="Left" Height="36" Margin="525,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="76" Click="Button_Click_2"/>
         </Grid>
     </Grid>
 </Window>

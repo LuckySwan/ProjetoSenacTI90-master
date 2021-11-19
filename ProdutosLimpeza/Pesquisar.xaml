@@ -10,13 +10,14 @@
     <Grid Background="#FF9D9C9C">
         <Rectangle Fill="DarkBlue" Height="15" Stroke="Black" VerticalAlignment="Top"/>
 
-        <TextBox HorizontalAlignment="Center" Height="44" Margin="394,126,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
+        <TextBox x:Name="CodigoProduto" HorizontalAlignment="Center" Height="44" Margin="394,126,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476" TextChanged="TextBox_TextChanged"/>
         <Label Content="Codigo do Produto" HorizontalAlignment="Left" Height="44" Margin="146,126,0,0" VerticalAlignment="Top" Width="208" FontSize="20" FontWeight="Black" />
         <Label Content="Pesquisa por Itens em Estoque" HorizontalAlignment="Center" Margin="226,34,308,440" Width="372" FontSize="25" FontWeight="Medium" FontStyle="Normal"  HorizontalContentAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="44" Margin="527,262,104,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
-        <Label Content="Preç por Uni ou Lt" HorizontalAlignment="Left" Height="44" Margin="325,262,0,0" VerticalAlignment="Top" Width="197" FontSize="20" />
-        <TextBox HorizontalAlignment="Center" Height="44" Margin="394,204,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
-        <Label Content="Nome do Produto" HorizontalAlignment="Left" Height="44" Margin="146,204,0,0" VerticalAlignment="Top" Width="182" FontSize="20" />
+        <TextBox x:Name="precoProduto" HorizontalAlignment="Left" Height="44" Margin="363,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+        <Label Content="Preç por Uni ou Lt" HorizontalAlignment="Left" Height="44" Margin="157,395,0,0" VerticalAlignment="Top" Width="197" FontSize="20" />
+        <TextBox x:Name="nomeProduto" HorizontalAlignment="Left" Height="44" Margin="341,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
+        <Label Content="Nome do Produto" HorizontalAlignment="Left" Height="44" Margin="89,318,0,0" VerticalAlignment="Top" Width="182" FontSize="20" />
+        <Button Content="Pesquisar" HorizontalAlignment="Left" FontSize="20" Height="57" Margin="327,223,0,0" VerticalAlignment="Top" Width="234" Click="Button_Click"/>
 
     </Grid>
 </Window>
