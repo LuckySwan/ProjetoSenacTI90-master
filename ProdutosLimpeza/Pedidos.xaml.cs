@@ -68,7 +68,7 @@ namespace ProdutosLimpeza
             using (var sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();
-                var cmd = $"SELECT INTO PEDIDO (codigo, preco) VALUE ({CodigoItem1.Text})";
+                var cmd = $"SELECT INTO PEDIDO (preco) VALUE ({CodItem1.Text})";
                 var sqlCommand = new SqlCommand(cmd, sqlConnection);
                 var da = new SqlDataAdapter(sqlCommand);
                 var result = sqlCommand.ExecuteNonQuery();
