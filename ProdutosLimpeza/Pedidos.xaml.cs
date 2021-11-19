@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,59 @@ namespace ProdutosLimpeza
     /// </summary>
     public partial class Pedidos : Window
     {
+        string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public Pedidos()
         {
             InitializeComponent();
         }
 
-        private void CodigoItem1_TextChanged(object sender, TextChangedEventArgs e)
+       
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem1.Text})";
+                var sqlCommand = new SqlCommand(cmd, sqlConnection);
+                var da = new SqlDataAdapter(sqlCommand);
+                var result = sqlCommand.ExecuteNonQuery();
+            }
+         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem2.Text})";
+                var sqlCommand = new SqlCommand(cmd, sqlConnection);
+                var da = new SqlDataAdapter(sqlCommand);
+                var result = sqlCommand.ExecuteNonQuery();
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem3.Text})";
+                var sqlCommand = new SqlCommand(cmd, sqlConnection);
+                var da = new SqlDataAdapter(sqlCommand);
+                var result = sqlCommand.ExecuteNonQuery();
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                var cmd = $"SELECT INTO PEDIDO (codigo, preco) VALUE ({CodigoItem1.Text})";
+                var sqlCommand = new SqlCommand(cmd, sqlConnection);
+                var da = new SqlDataAdapter(sqlCommand);
+                var result = sqlCommand.ExecuteNonQuery();
+            }
         }
     }
 }
