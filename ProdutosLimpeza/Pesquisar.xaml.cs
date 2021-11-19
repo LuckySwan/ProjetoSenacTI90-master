@@ -78,25 +78,25 @@ namespace ProdutosLimpeza
 
 
 
-    private void Pesquisar_Click(object sender, RoutedEventArgs e)
-    {
+    //private void Pesquisar_Click(object sender, RoutedEventArgs e)
+    //{
 
-    }
+    //}
 
-    private void cadastrar_Click(object sender, RoutedEventArgs e)
-    {
-        using (var sqlConnection = new SqlConnection(connectionString))
-        {
-            sqlConnection.Open();
-            var cmd = $"INSET INTO PRODUTO (nome, preco, codigo) VALUE ({nomeProduto.Text}, {precoproduto.Text},{CodigoProduto.Text})";
-            var sqlCommand = new SqlCommand(cmd, sqlConnection);
-            var da = new SqlDataAdapter(sqlCommand);
-            var result = sqlCommand.ExecuteNonQuery();
+    //private void cadastrar_Click(object sender, RoutedEventArgs e)
+    //{
+    //    using (var sqlConnection = new SqlConnection(connectionString))
+    //    {
+    //        sqlConnection.Open();
+    //        var cmd = $"INSET INTO PRODUTO (nome, preco, codigo) VALUE ({nomeProduto.Text}, {precoproduto.Text},{CodigoProduto.Text})";
+    //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
+    //        var da = new SqlDataAdapter(sqlCommand);
+    //        var result = sqlCommand.ExecuteNonQuery();
 
 
-        }
-    }
+    //    }
+    //}
 
 }
-}
-}
+
+
