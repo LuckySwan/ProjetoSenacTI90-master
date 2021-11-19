@@ -41,7 +41,7 @@ namespace ProdutosLimpeza
                 var sqlCommand = new SqlCommand(cmd, conn);
                 var insertedId = Convert.ToInt32(sqlCommand.ExecuteScalar());
 
-                var cmd1 = $"INSERT INTO Cliente (Nome, Telefone, Id_Endereco) VALUES ( '{customerNomeTextBox.Text}', '{customerTelefoneTextBox.Text}', {insertedId})";
+                var cmd1 = $"INSERT INTO Cliente (Nome, Telefone, Id_Endereco) VALUES ( '{customerNomeTextBox.Text}', '{customerTelefoneTextBox.Text}', {insertedId})"; 
                 var sqlCommand1 = new SqlCommand(cmd1, conn);
                 var result = sqlCommand.ExecuteNonQuery();
 
