@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 namespace ProdutosLimpeza
 {
     
-    /// <summary>
-    /// Lógica interna para addCustumerWindow.xaml
-    /// </summary>
     public partial class addCustumerWindow : Window
     {
         string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -37,16 +34,22 @@ namespace ProdutosLimpeza
             {
                 conn.Open();
 
-                var cmd = $"INSERT INTO Endereco (Cidade, Bairro, Rua, Numero, Complemento) VALUES ( '{customerCidadeTextBox.Text}', '{customerBairroTextBox.Text}', '{customerRuaTextBox.Text}', '{int.Parse(customerNumeroTextBox.Text)}', '{customerComplementoTextBox.Text}')";
+                var cmd = $"INSERT INTO Endereco (Cidade, Bairro, Rua, Numero, Complemento) OUTPUT Inserted.Id VALUES ( '{customerCidadeTextBox.Text}', '{customerBairroTextBox.Text}', '{customerRuaTextBox.Text}', '{int.Parse(customerNumeroTextBox.Text)}', '{customerComplementoTextBox.Text}') ";
                 var sqlCommand = new SqlCommand(cmd, conn);
+                var insertedId = Convert.ToInt32(sqlCommand.ExecuteScalar());
+
+                var cmd1 = $"INSERT INTO Cliente (Nome, Telefone, Id_Endereco) VALUES ( '{customerNomeTextBox.Text}', '{customerTelefoneTextBox.Text}', {insertedId})";
+                var sqlCommand1 = new SqlCommand(cmd1, conn);
                 var result = sqlCommand.ExecuteNonQuery();
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Dados Inseridos com Sucesso");//h
+                    MessageBox.Show("Dados Inseridos com Sucesso");
                 }
             }
 
         }
+
+     
     }
 }
