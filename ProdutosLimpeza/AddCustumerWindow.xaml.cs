@@ -22,7 +22,7 @@ namespace ProdutosLimpeza
     /// </summary>
     public partial class addCustumerWindow : Window
     {
-        string connectionString = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\dados\\NORTHWND.MDF;Integrated Security=True; Connect Timeout=30;User Instance=True";
+        string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public addCustumerWindow()
         {
@@ -37,7 +37,7 @@ namespace ProdutosLimpeza
             {
                 conn.Open();
 
-                var cmd = $"INSERT INTO Enderco (Cidade, Bairro, Rua, Numero, Complemento) VALUES ( '{customerCidadeTextBox.Text}', '{customerBairroTextBox.Text}'";
+                var cmd = $"INSERT INTO Endereco (Cidade, Bairro, Rua, Numero, Complemento) VALUES ( '{customerCidadeTextBox.Text}', '{customerBairroTextBox.Text}', '{customerRuaTextBox.Text}', '{int.Parse(customerNumeroTextBox.Text)}', '{customerComplementoTextBox.Text}')";
                 var sqlCommand = new SqlCommand(cmd, conn);
                 var result = sqlCommand.ExecuteNonQuery();
 
