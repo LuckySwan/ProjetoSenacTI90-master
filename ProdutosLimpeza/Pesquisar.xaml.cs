@@ -31,6 +31,12 @@ namespace ProdutosLimpeza
 
         }
 
+        
+    }
+}
+
+        }
+
         private void pesquisar_Click(object sender, RoutedEventArgs e)
         {
             using (var sqlConnection = new SqlConnection(connectionString))
