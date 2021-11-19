@@ -47,7 +47,7 @@ namespace ProdutosLimpeza
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Dados Inseridos com Sucesso");
+                    MessageBox.Show("Dados Inseridos com Sucesso");//h
                 }
             }
 
