@@ -17,7 +17,8 @@
         <Label Content="Preç por Uni ou Lt" HorizontalAlignment="Left" Height="44" Margin="178,398,0,0" VerticalAlignment="Top" Width="197" FontSize="20" />
         <TextBox x:Name="nomeProduto" HorizontalAlignment="Center" Height="44" Margin="332,328,98,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476"/>
         <Label Content="Nome do Produto" HorizontalAlignment="Left" Height="44" Margin="84,328,0,0" VerticalAlignment="Top" Width="182" FontSize="20" />
-        <Button x:Name="pesquisar"  Content="PESQUISAR CODIGO" HorizontalAlignment="Left" Margin="380,202,0,0" VerticalAlignment="Top" Width="218" FontSize="20" Height="65" Click="pesquisar_Click"/>
+        <Button x:Name="pesquisar"  Content="Pesquisar Codigo" HorizontalAlignment="Left" Margin="437,204,0,0" VerticalAlignment="Top" Width="218" FontSize="20" Height="65" Click="pesquisar_Click"/>
+        <Button x:Name="cadastrar" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="157,204,0,0" VerticalAlignment="Top" Width="218" FontSize="20" Height="65" Click="cadastrar_Click"/>
 
     </Grid>
 </Window>
