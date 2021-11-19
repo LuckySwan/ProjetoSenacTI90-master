@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace ProdutosLimpeza
 {
-   
+
     public partial class Pesquisar : Window
     {
         string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -34,7 +34,24 @@ namespace ProdutosLimpeza
         {
 
         }
+ private void Pesquisar_Click(object sender, RoutedEventArgs e)
+    {
 
+    }
+
+    private void cadastrar_Click(object sender, RoutedEventArgs e)
+    {
+        using (var sqlConnection = new SqlConnection(connectionString))
+        {
+            sqlConnection.Open();
+            var cmd = $"INSET INTO PRODUTO (nome, preco, codigo) VALUE ({nomeProduto.Text}, {precoProduto.Text},{CodigoProduto.Text})";
+            var sqlCommand = new SqlCommand(cmd, sqlConnection);
+            var da = new SqlDataAdapter(sqlCommand);
+            var result = sqlCommand.ExecuteNonQuery();
+
+
+        }
+    }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             using (var sqlConnection = new SqlConnection(connectionString))
@@ -61,25 +78,8 @@ namespace ProdutosLimpeza
 
 
 
-    private void Pesquisar_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+   
 
-        private void cadastrar_Click(object sender, RoutedEventArgs e)
-        {
-            using (var sqlConnection = new SqlConnection(connectionString))
-            {
-                sqlConnection.Open();
-                var cmd = $"INSET INTO PRODUTO (nome, preco, codigo) VALUE ({nomeProduto.Text}, {precoproduto.Text},{CodigoProduto.Text})";
-                var sqlCommand = new SqlCommand(cmd, sqlConnection);
-                var da = new SqlDataAdapter(sqlCommand);
-                var result = sqlCommand.ExecuteNonQuery();
+}
 
-               
-            }
-}
->>>>>>> Stashed changes
-    }
-}
-}
+

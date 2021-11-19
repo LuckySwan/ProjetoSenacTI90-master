@@ -63,16 +63,16 @@ namespace ProdutosLimpeza
             }
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            using (var sqlConnection = new SqlConnection(connectionString))
-            {
-                sqlConnection.Open();
-                var cmd = $"SELECT INTO PEDIDO (preco) VALUE ({CodItem1.Text})";
-                var sqlCommand = new SqlCommand(cmd, sqlConnection);
-                var da = new SqlDataAdapter(sqlCommand);
-                var result = sqlCommand.ExecuteNonQuery();
-            }
-        }
+    //    private void Button_Click_3(object sender, RoutedEventArgs e)
+    //    {
+    //        using (var sqlConnection = new SqlConnection(connectionString))
+    //        {
+    //            sqlConnection.Open();
+    //            var cmd = $"SELECT INTO PEDIDO (preco) VALUE ({CodItem1.Text})";
+    //            var sqlCommand = new SqlCommand(cmd, sqlConnection);
+    //            var da = new SqlDataAdapter(sqlCommand);
+    //            var result = sqlCommand.ExecuteNonQuery();
+    //        }
+    //    }
     }
 }
