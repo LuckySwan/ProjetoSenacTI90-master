@@ -30,11 +30,12 @@ namespace ProdutosLimpeza
     {
         string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-
+        List<Pedido> pedidosList;
 
         public Pedidos()
         {
             InitializeComponent();
+            pedidosList = new List<Pedido>();
         }
 
         public int Id { get; private set; }
@@ -82,7 +83,7 @@ namespace ProdutosLimpeza
 
         private void pedidoCombo_Loaded(object sender, RoutedEventArgs e)
         {
-            var pedidosList = new List<Pedido>();
+            
 
             var conn = new SqlConnection(connectionString);
             conn.Open();
@@ -121,5 +122,6 @@ namespace ProdutosLimpeza
             }
             pagamentoCombo.ItemsSource = pagamentosList;
         }
+
     }
 }

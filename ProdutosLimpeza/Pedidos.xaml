@@ -29,7 +29,7 @@
             <Label Content="Codigo do item" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="1" Grid.Column="0" Margin="0,0,63,0" Width="156"></Label>
             <Label Content="Valor Total" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="7" Grid.Column="1" Margin="0,0,401,0" Width="110"/>
             <TextBox x:Name="preco1" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="383,10,0,10" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="112"/>
-            <TextBox x:Name="precoTotal" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="32,9,0,0" Grid.Row="8" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346"/>
+            <TextBox x:Name="precoTotal" HorizontalAlignment="Left" Height="30" Margin="0,5,0,0" Grid.Row="8" TextWrapping="Wrap"  VerticalAlignment="Top" Width="346" Grid.Column="1"/>
             <Button Content="Faturar" HorizontalAlignment="Left" Height="36" Margin="155,3,0,0" Grid.Row="6" VerticalAlignment="Top" Width="76" Grid.Column="1" />
             <ComboBox x:Name="pedidoCombo"  ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" Grid.Column="1" Grid.Row="1" Loaded="pedidoCombo_Loaded" Margin="19,10,401,10"/>
             <Label Content="Quant." HorizontalAlignment="Right" FontWeight="Bold" FontSize="20" Grid.Row="1" Grid.Column="1" Margin="0,10,265,0" Width="74"/>
