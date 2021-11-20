@@ -20,12 +20,17 @@ namespace ProdutosLimpeza
         public int Id { get; set; }
         public string Name { get; set; }
     }
+    public class Pagamento
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 
     public partial class Pedidos : Window
     {
-        string connectionString = $"Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        
+
 
         public Pedidos()
         {
@@ -73,9 +78,11 @@ namespace ProdutosLimpeza
         //}
 
 
-        private void pedidoCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+       
+
+        private void pedidoCombo_Loaded(object sender, RoutedEventArgs e)
         {
-            var pedidosList = new List<Pedidos>();
+            var pedidosList = new List<Pedido>();
 
             var conn = new SqlConnection(connectionString);
             conn.Open();
@@ -84,14 +91,35 @@ namespace ProdutosLimpeza
             var dataReader = SqlCommand.ExecuteReader();
             while (dataReader.Read())
             {
-                var pedidos = new Pedidos();
+                var pedido = new Pedido();
 
-                pedidos.Id = dataReader.GetInt32(0);
-                pedidos.Name = dataReader.GetString(1);
+                pedido.Id = dataReader.GetInt32(0);
+                pedido.Name = dataReader.GetString(1);
 
-                pedidosList.Add(pedidos);
+                pedidosList.Add(pedido);
             }
             pedidoCombo.ItemsSource = pedidosList;
+        }
+
+        private void pagamentoCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+            var pagamentosList = new List<Pagamento>();
+
+            var conn = new SqlConnection(connectionString);
+            conn.Open();
+            var cmd = "SELECT Id, Nome FROM Pagamento";
+            var SqlCommand = new SqlCommand(cmd, conn);
+            var dataReader = SqlCommand.ExecuteReader();
+            while (dataReader.Read())
+            {
+                var pagamento = new Pagamento();
+
+                pagamento.Id = dataReader.GetInt32(0);
+                pagamento.Name = dataReader.GetString(1);
+
+                pagamentosList.Add(pagamento);
+            }
+            pagamentoCombo.ItemsSource = pagamentosList;
         }
     }
 }
