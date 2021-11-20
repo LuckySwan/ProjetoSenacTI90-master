@@ -78,10 +78,7 @@ namespace ProdutosLimpeza
 
 
 
-    //private void Pesquisar_Click(object sender, RoutedEventArgs e)
-    //{
-
-    //}
+    
 
     //private void cadastrar_Click(object sender, RoutedEventArgs e)
     //{

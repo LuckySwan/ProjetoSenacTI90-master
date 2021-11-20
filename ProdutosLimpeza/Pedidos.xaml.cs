@@ -15,64 +15,83 @@ using System.Windows.Shapes;
 
 namespace ProdutosLimpeza
 {
-    /// <summary>
-    /// Lógica interna para Pedidos.xaml
-    /// </summary>
+    public class Pedido
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
     public partial class Pedidos : Window
     {
-        string connectionString = "Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = $"Data Source=sqllimpeza.database.windows.net;Initial Catalog=Limpeza;User ID=limpeza;Password=@senacGHL;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        
+
         public Pedidos()
         {
             InitializeComponent();
         }
 
-       
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            using (var sqlConnection = new SqlConnection(connectionString))
-            {
-                sqlConnection.Open();
-                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem1.Text})";
-                var sqlCommand = new SqlCommand(cmd, sqlConnection);
-                var da = new SqlDataAdapter(sqlCommand);
-                var result = sqlCommand.ExecuteNonQuery();
-            }
-         }
+        public int Id { get; private set; }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    using (var sqlConnection = new SqlConnection(connectionString))
+        //    {
+        //        sqlConnection.Open();
+        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem1.Text})";
+        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
+        //        var da = new SqlDataAdapter(sqlCommand);
+        //        var result = sqlCommand.ExecuteNonQuery();
+        //    }
+        // }
+
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    using (var sqlConnection = new SqlConnection(connectionString))
+        //    {
+        //        sqlConnection.Open();
+        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem2.Text})";
+        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
+        //        var da = new SqlDataAdapter(sqlCommand);
+        //        var result = sqlCommand.ExecuteNonQuery();
+        //    }
+        //}
+
+        //private void Button_Click_2(object sender, RoutedEventArgs e)
+        //{
+        //    using (var sqlConnection = new SqlConnection(connectionString))
+        //    {
+        //        sqlConnection.Open();
+        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem3.Text})";
+        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
+        //        var da = new SqlDataAdapter(sqlCommand);
+        //        var result = sqlCommand.ExecuteNonQuery();
+        //    }
+        //}
+
+
+        private void pedidoCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            using (var sqlConnection = new SqlConnection(connectionString))
+            var pedidosList = new List<Pedidos>();
+
+            var conn = new SqlConnection(connectionString);
+            conn.Open();
+            var cmd = "SELECT Id, Nome FROM Produto";
+            var SqlCommand = new SqlCommand(cmd, conn);
+            var dataReader = SqlCommand.ExecuteReader();
+            while (dataReader.Read())
             {
-                sqlConnection.Open();
-                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem2.Text})";
-                var sqlCommand = new SqlCommand(cmd, sqlConnection);
-                var da = new SqlDataAdapter(sqlCommand);
-                var result = sqlCommand.ExecuteNonQuery();
+                var pedidos = new Pedidos();
+
+                pedidos.Id = dataReader.GetInt32(0);
+                pedidos.Name = dataReader.GetString(1);
+
+                pedidosList.Add(pedidos);
             }
+            pedidoCombo.ItemsSource = pedidosList;
         }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            using (var sqlConnection = new SqlConnection(connectionString))
-            {
-                sqlConnection.Open();
-                var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem3.Text})";
-                var sqlCommand = new SqlCommand(cmd, sqlConnection);
-                var da = new SqlDataAdapter(sqlCommand);
-                var result = sqlCommand.ExecuteNonQuery();
-            }
-        }
-
-    //    private void Button_Click_3(object sender, RoutedEventArgs e)
-    //    {
-    //        using (var sqlConnection = new SqlConnection(connectionString))
-    //        {
-    //            sqlConnection.Open();
-    //            var cmd = $"SELECT INTO PEDIDO (preco) VALUE ({CodItem1.Text})";
-    //            var sqlCommand = new SqlCommand(cmd, sqlConnection);
-    //            var da = new SqlDataAdapter(sqlCommand);
-    //            var result = sqlCommand.ExecuteNonQuery();
-    //        }
-    //    }
     }
 }
