@@ -51,49 +51,49 @@ namespace ProdutosLimpeza
         {
             
 
-            //var conn = new SqlConnection(connectionString);
-            //conn.Open();
-            //var cmd = "SELECT Id, Nome FROM Produto";
-            //var SqlCommand = new SqlCommand(cmd, conn);
-            //var dataReader = SqlCommand.ExecuteReader();
-            //while (dataReader.Read())
-            //{
-            //    var pedido = new Pedido();
+            var conn = new SqlConnection(connectionString);
+            conn.Open();
+            var cmd = "SELECT Id, Nome FROM Produto";
+            var SqlCommand = new SqlCommand(cmd, conn);
+            var dataReader = SqlCommand.ExecuteReader();
+            while (dataReader.Read())
+            {
+                var pedido = new Pedido();
 
-            //    pedido.Id = dataReader.GetInt32(0);
-            //    pedido.Name = dataReader.GetString(1);
+                pedido.Id = dataReader.GetInt32(0);
+                pedido.Name = dataReader.GetString(1);
 
-            //    pedidosList.Add(pedido);
-            //}
-            //pedidoCombo.ItemsSource = pedidosList;
+                pedidosList.Add(pedido);
+            }
+            nomeProdutoCombo.ItemsSource = pedidosList;
         }
 
         private void pagamentoCombo_Loaded(object sender, RoutedEventArgs e)
         {
-            //var pagamentosList = new List<Pagamento>();
+            var pagamentosList = new List<Pagamento>();
 
-            //var conn = new SqlConnection(connectionString);
-            //conn.Open();
-            //var cmd = "SELECT Id, Nome FROM Pagamento";
-            //var SqlCommand = new SqlCommand(cmd, conn);
-            //var dataReader = SqlCommand.ExecuteReader();
-            //while (dataReader.Read())
-            //{
-            //    var pagamento = new Pagamento();
+            var conn = new SqlConnection(connectionString);
+            conn.Open();
+            var cmd = "SELECT Id, Nome FROM Pagamento";
+            var SqlCommand = new SqlCommand(cmd, conn);
+            var dataReader = SqlCommand.ExecuteReader();
+            while (dataReader.Read())
+            {
+                var pagamento = new Pagamento();
 
-            //    pagamento.Id = dataReader.GetInt32(0);
-            //    pagamento.Name = dataReader.GetString(1);
+                pagamento.Id = dataReader.GetInt32(0);
+                pagamento.Name = dataReader.GetString(1);
 
-            //    pagamentosList.Add(pagamento);
-            //}
-            //pagamentoCombo.ItemsSource = pagamentosList;
+                pagamentosList.Add(pagamento);
+            }
+            pagamentoCombo.ItemsSource = pagamentosList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
            var conn = new SqlConnection(connectionString);
             conn.Open();
-            string cmd = $"INSERT INTO ProdutoFaturado (Id, Produto, Quantidade, ForPag) VALUES (0, '{nomeProdutoCombo.Text}', '{int.Parse(quantidade.Text)}', '{pagamentoCombo}')";
+            string cmd = $"INSERT INTO ProdutoFaturado (Id, Produto, Quantidade, ForPag) VALUES (1, '{nomeProdutoCombo.Text}', '{int.Parse(quantidade.Text)}', '{pagamentoCombo}')";
             var sqlCommand = new SqlCommand(cmd, conn);
             var result = sqlCommand.ExecuteNonQuery();
 
