@@ -99,7 +99,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pesquisar.xaml">
+    <Page Include="Faturados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,8 +108,8 @@
     <Compile Include="Pedidos.xaml.cs">
       <DependentUpon>Pedidos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pesquisar.xaml.cs">
-      <DependentUpon>Pesquisar.xaml</DependentUpon>
+    <Compile Include="Faturados.xaml.cs">
+      <DependentUpon>Faturados.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

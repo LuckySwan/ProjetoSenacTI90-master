@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProdutosLimpeza.Pesquisar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProdutosLimpeza"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Pesquisar" Height="575" Width="914" Background="#FFEEEEF2">
+    <Grid Background="#FF9D9C9C">
+        <Rectangle Fill="DarkBlue" Height="15" Stroke="Black" VerticalAlignment="Top"/>
+        <Label Content="Pedidos Faturados" HorizontalAlignment="Center" Margin="265,20,269,454" Width="372" FontSize="25" FontWeight="Medium" FontStyle="Normal"  HorizontalContentAlignment="Center"/>
+        <DataGrid x:Name="dataGridFaturados" HorizontalAlignment="Left" Height="320" Margin="117,114,0,0" VerticalAlignment="Top" Width="680" />
+    </Grid>
+</Window>
