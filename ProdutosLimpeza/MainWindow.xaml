@@ -10,7 +10,7 @@
     <Grid Margin="0,0,764,0" Background="DimGray">
 
         <Rectangle Fill="DarkBlue" Height="14" Stroke="Black" VerticalAlignment="Top" Margin="0,0,-764,0"/>
-        <Button Content="Pedidos &#xD;&#xA;Faturados" Height="64" Margin="28,70,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+        <Button Content="Pedidos &#xD;&#xA;Faturados" Margin="26,84,30,396" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Cadastrar" Height="64" Margin="30,314,26,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+        <Button Content="Cadastrar" Margin="28,246,28,234" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,7 +30,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Pedidos" Height="64" Margin="28,422,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_2">
+        <Button Content="Pedidos" Margin="30,421,26,59" RenderTransformOrigin="0.5,0.5" Click="Button_Click_2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,16 +42,6 @@
         </Button>
         <!--<Image Source="C:\Users\lucas.osantos42\Source\Repos\ProjetoSenacTI90-master\ProdutosLimpeza\Imagem\produtos.jpg" Margin="198,98,-744,25"/>-->
         <Label Content="Produtos de Limpeza" HorizontalAlignment="Left" Height="74" Margin="184,19,-744,0"  FontSize="45" VerticalAlignment="Top" Width="702"/>
-        <Button Content="Clientes &#xD;&#xA;Cadastrados" Height="64" Margin="28,191,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.445"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
     </Grid>
 
 
