@@ -42,41 +42,7 @@ namespace ProdutosLimpeza
 
 
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    using (var sqlConnection = new SqlConnection(connectionString))
-        //    {
-        //        sqlConnection.Open();
-        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem1.Text})";
-        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
-        //        var da = new SqlDataAdapter(sqlCommand);
-        //        var result = sqlCommand.ExecuteNonQuery();
-        //    }
-        // }
-
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    using (var sqlConnection = new SqlConnection(connectionString))
-        //    {
-        //        sqlConnection.Open();
-        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem2.Text})";
-        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
-        //        var da = new SqlDataAdapter(sqlCommand);
-        //        var result = sqlCommand.ExecuteNonQuery();
-        //    }
-        //}
-
-        //private void Button_Click_2(object sender, RoutedEventArgs e)
-        //{
-        //    using (var sqlConnection = new SqlConnection(connectionString))
-        //    {
-        //        sqlConnection.Open();
-        //        var cmd = $"INSET INTO PEDIDO (codigo) VALUE ({CodigoItem3.Text})";
-        //        var sqlCommand = new SqlCommand(cmd, sqlConnection);
-        //        var da = new SqlDataAdapter(sqlCommand);
-        //        var result = sqlCommand.ExecuteNonQuery();
-        //    }
-        //}
+        
 
 
        
@@ -123,5 +89,18 @@ namespace ProdutosLimpeza
             pagamentoCombo.ItemsSource = pagamentosList;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           var conn = new SqlConnection(connectionString);
+            conn.Open();
+            string cmd = $"INSERT INTO ProdutosFaturados (iD, Produto, Quantidade, FPagamento) VALUE ( '{pedidoCombo.Text}', '{preco1}', '{pagamentoCombo}')";
+            var sqlCommand = new SqlCommand(cmd, conn);
+            var result = sqlCommand.ExecuteNonQuery();
+
+            if (result > 0)
+            {
+                MessageBox.Show("Pedido Efetuado com Sucesso");
+            }
+        }
     }
 }
