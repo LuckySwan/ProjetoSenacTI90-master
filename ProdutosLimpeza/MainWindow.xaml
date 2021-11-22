@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Cadastrar" Height="64" Margin="28,245,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+        <Button Content="Cadastrar" Height="64" Margin="30,314,26,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,6 +42,16 @@
         </Button>
         <!--<Image Source="C:\Users\lucas.osantos42\Source\Repos\ProjetoSenacTI90-master\ProdutosLimpeza\Imagem\produtos.jpg" Margin="198,98,-744,25"/>-->
         <Label Content="Produtos de Limpeza" HorizontalAlignment="Left" Height="74" Margin="184,19,-744,0"  FontSize="45" VerticalAlignment="Top" Width="702"/>
+        <Button Content="Clientes &#xD;&#xA;Cadastrados" Height="64" Margin="28,191,28,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.445"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 
 
