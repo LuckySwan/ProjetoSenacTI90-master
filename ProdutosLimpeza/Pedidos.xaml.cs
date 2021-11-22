@@ -93,7 +93,7 @@ namespace ProdutosLimpeza
         {
            var conn = new SqlConnection(connectionString);
             conn.Open();
-            string cmd = $"INSERT INTO ProdutosFaturados (iD, Produto, Quantidade, FPagamento) VALUE ( '{pedidoCombo.Text}', '{preco1}', '{pagamentoCombo}')";
+            string cmd = $"INSERT INTO ProdutosFaturados (iD, Produto, Quantidade, FPagamento) VALUE ( '{pedidoCombo.Text}', '{preco1.Text}', '{pagamentoCombo}')";
             var sqlCommand = new SqlCommand(cmd, conn);
             var result = sqlCommand.ExecuteNonQuery();
 
